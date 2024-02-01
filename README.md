@@ -31,14 +31,14 @@ Dense-Net. In this project, we will use a combination of both Res-Net and Dense-
 Dual Path Network. We will see the architecture, working, and advantages of the Dual Path Network
 in the next section
 
-#Dual Path Network
+# 3. Dual Path Network
 Dual Path Network is the combination of two deep learning networks i.e Res-Net and Dense-Net.
 In this section we will cover the advantages of a Dual Path Network over Res-Net/Dense-Net, the
 architecture of network, and its working.
 
 <img alt="image" src="asset/resnet.png">
 
-## 2.1 Advantages
+### 3.1 Advantages
 Res-Net and Dense-Net networks follow the same principle of skip connection with some different
 implementations. Both have their advantages as well as disadvantages associated with each. In the
 residual neural network, the filtered features are added to the original feature pipe i.e. it updates the
@@ -52,7 +52,7 @@ The model can be made more accurate if we combine both networks. This is known a
 network. The Dual-path network has advantages of both, it explores new features using Dense-Net
 and reduces feature redundancy using Res-Net.
 
-## 2.2 Architecture
+### 3.2 Architecture
 Dual-Path Network is formed using the bottleneck structure blocks similar to Res-Net. Figure 5
 shows the architecture of a single Dual-Path network block. The dense features from the dense path
 and residual features from the residual path are added after 1x1 convolution at first. Then the added
@@ -62,36 +62,49 @@ path. The remaining part is concatenated into the dense path.
 
 <img alt="image" src="asset/dual.png">
 
-# 3. Experiment
+# 4. Experiment
 
-## 3.1 Dataset
+### 4.1 Dataset
 The model is trained using the CIFAR 10 dataset. CIFAR 10 dataset consists of 50,000 labeled images
 for training and 10,000 labeled images for testing. The summary and classification of CIFAR 10 data
 are shown in Table 1. Apart from this 2000 private test images were provided which are used for
 prediction
+<img width="263" alt="image" src="https://github.com/ashuchauhan171996/Dual-Path-Network-for-Image-Classification/assets/83955120/055263f6-4db2-4a87-9ffe-886af171e8d7">
 
-## 3.2 Layers
+
+### 4.2 Layers
 Model has 4 stacks of layers. First stack have 3 layers, Second stack have 4 layers, third stack have
 20 layers and final stack have 3 layers. The summary of model can be seen in Table 2.
+<img width="598" alt="image" src="https://github.com/ashuchauhan171996/Dual-Path-Network-for-Image-Classification/assets/83955120/f2d68e51-fbfe-46dc-a1c4-e3557afebc7e">
 
 
-## 3.3 Observations and Hyperparameters
+### 4.3 Observations and Hyperparameters
 The model was trained on multiple hyperparameters and the validation accuracy was calculated for
 each case. A few cases are attached in the appendix. The model was retrained on complete training
 samples corresponding to the highest accuracy hyperparameters. The final hyperparameters used can
 be seen in Table 3.
+<img width="257" alt="image" src="https://github.com/ashuchauhan171996/Dual-Path-Network-for-Image-Classification/assets/83955120/315a8e5d-2a76-4f1a-a934-bef53934591c">
 
 <img alt="image" src="asset/accuracy.png">
 
-# 4. Results
+# 5. Results
 The final accuracy was found to be 94.32% on public test set at 190 epochs. The variation of accuracy
 basis epoch can be seen in Figure 5. We could conclude that Dual-Path network performs better as
 compared to Res-Net and Dense-Net. The Dual-path network has advantages of both, it explores new
 features using Dense-Net and reduces feature redundancy using Res-Net.
 
-# 5. Referances
+# 6. Referances
 [1] Chen, Yunpeng, et al. “Dual path networks.” (2017)
 [2] He, Kaiming, et al. “Deep residual learning for image recognition.” (2016)
 [3] Huang, Gao, et al. “Densely connected convolutional networks.” (2017)
 
-# 6. Appendix
+# 7. Appendix
+<img width="600" alt="image" src="https://github.com/ashuchauhan171996/Dual-Path-Network-for-Image-Classification/assets/83955120/06758003-7584-4626-9bca-663b135b90b3">
+<img width="628" alt="image" src="https://github.com/ashuchauhan171996/Dual-Path-Network-for-Image-Classification/assets/83955120/55cbcbbe-cd47-445c-914a-32b933cdbf65">
+<img width="625" alt="image" src="https://github.com/ashuchauhan171996/Dual-Path-Network-for-Image-Classification/assets/83955120/9edc0cf0-8de1-40df-b376-6697e6cf65b7">
+<img width="602" alt="image" src="https://github.com/ashuchauhan171996/Dual-Path-Network-for-Image-Classification/assets/83955120/d237efcc-b29c-48b7-b8a2-202aa5c63c13">
+<img width="634" alt="image" src="https://github.com/ashuchauhan171996/Dual-Path-Network-for-Image-Classification/assets/83955120/144fd9bc-513d-49c1-8e4e-4ff597ec712a">
+
+
+
+
